@@ -1,0 +1,3 @@
+[submodule "vendor/tfenv"]
+	path = vendor/tfenv
+	url = git@github.com:kamatama41/tfenv
