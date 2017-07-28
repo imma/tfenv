@@ -9,6 +9,7 @@ function main {
   git reset --hard "v$TFENV_VERSION"
   mkdir -p "$shome/bin"
   ln -nfs ../vendor/tfenv/bin/tfenv "$shome/bin/"
+  ln -nfs ../vendor/tfenv/bin/terraform "$shome/bin/"
 }
 
 main "$@"
