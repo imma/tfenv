@@ -7,6 +7,8 @@ function main {
   block compile gitsubmodule
   cd "$shome/vendor/tfenv"
   git reset --hard "v$TFENV_VERSION"
+  mkdir -p "$shome/bin"
+  ln -nfs ../vendor/tfenv/bin/tfenv "$shome/bin/"
 }
 
 main "$@"
