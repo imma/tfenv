@@ -4,9 +4,10 @@ function main {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  block compile gitsubmodule
-  cd "$shome/vendor/tfenv"
-  git reset --hard "v$TFENV_VERSION"
+  git clone -b "v${TFENV_VERSION}" git@github.com:kamatama41/tfenv "$shome/vendor/tfenv-${TFENV_VERSION}" || true
+  rm -rf "$shome/vendor/tfenv"
+  ln -nfs "tfenv-${TFENV_VERSION}" "$shome/vendor/tfenv"
+
   mkdir -p "$shome/bin"
   ln -nfs ../vendor/tfenv/bin/tfenv "$shome/bin/"
   ln -nfs ../vendor/tfenv/bin/terraform "$shome/bin/"

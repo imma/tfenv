@@ -5,8 +5,6 @@ function _tfenv_profile {
   PATH="$shome/bin:$shome/exec:$PATH"
   #export ANSIBLE_ROLES_PATH="$shome/roles${ANSIBLE_ROLES_PATH:+:${ANSIBLE_ROLES_PATH}}"
   #export ANSIBLE_LIBRARY="$shome/library${ANSIBLE_LIBRARY:+:${ANSIBLE_LIBRARY}}"
-
-  TFENV_VERSION='0.5.2'
 }
 
 _tfenv_profile
