@@ -1,4 +1,6 @@
 {
-  "require": [
-  ]
+  "require": [],
+  "versions": {
+    "tfenv": "kamatama41/tfenv"
+  }
 }
